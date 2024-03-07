@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WELCOME TO ADMIN PAGE</title>
+	<style>
+		body {
+			background: linear-gradient(135deg, #74b7e1, #080a76);
+			background-repeat: no-repeat;
+			background-size: 120% 140%;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			background-color: #333;
+		}
+
+		h1 {
+			text-align: center;
+			font-weight: bold;
+
+			margin-top: 50px;
+			position: relative;
+			animation: neonGlow 2s ease-in-out infinite alternate;
+		}
+		h1:hover{
+   			 text-shadow:0 0 5px #fff,
+   			0 0 10px #fff,0 0 15px #0073e6,
+    		0 0 20px #0073e6,0 0 25px #0073e6,
+    		0 0 30px #0073e6;
+			}
+		.container {
+			margin: 50px auto;
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.card {
+			background: linear-gradient(135deg, #c0e1f7, #080a76);
+			background-color: #1a1919;
+			border-radius: 5px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+			margin: 20px 20px 0 0;
+			padding: 20px;
+			height:45px;
+			width: 300px;
+			display:flex;
+			text-align: center;
+			align-items:center;
+			justify-content:center;
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			animation: slideUp 1s ease-in-out;
+		}
+
+		.dropdown {
+			position: relative;
+			display:flex;
+			text-align: center;
+			align-items:center;
+			justify-content:center;
+		}
+
+		.dropbtn {
+			color: #fff;
+			text-decoration: none;
+			
+		}
+
+		.activity-cards {
+			position: absolute;
+			top: -100px;
+			right: -500px;
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 60px;
+			margin-right: 20px;
+			z-index: 1;
+			transition: right 0.5s;
+			animation: slideRight 0.5s ease-in-out;
+		}
+
+		.activity-card {
+			background: linear-gradient(135deg, #c0e1f7, #080a76);
+			background-color: #1a1a1a;
+			border-radius: 5px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+			margin-bottom: 20px;
+			padding: 20px;
+			height: 40px;
+			width: 300px;
+			display:flex;
+			text-align: center;
+			align-items:center;
+			justify-content:center;
+			color: #fff;
+			text-decoration: none;
+			transition: background-color 0.3s;
+		}
+
+		.activity-card:hover {
+			background-color: #333;
+		}
+
+		.manage-student-cards {
+			position: absolute;
+			top: -200px;
+			right: -500px;
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 60px;
+			margin-right: 20px;
+			z-index: 1;
+			animation: slideRight 0.5s ease-in-out;
+		}
+
+		.student-card {
+			background: linear-gradient(135deg, #c0e1f7, #080a76);
+			background-color: #1a1a1a;
+			border-radius: 5px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+			margin-bottom: 20px;
+			padding: 20px;
+			height: 40px;
+			width: 300px;
+			display:flex;
+			text-align: center;
+			align-items:center;
+			justify-content:center;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.show {
+			display: flex;
+		}
+
+		@keyframes slideUp {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes slideRight {
+			from {
+				opacity: 0;
+				transform: translateX(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+		.home-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, #c0e1f7, #080a76);
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .home-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+   
+	</style>
+</head>
+<body>
+	<h1>WELCOME TO ADMIN PAGE</h1>
+	<div class="container">
+		<a href="view_activity.php" class="card">View activity</a>
+		<div class="card dropdown" id="manage-activity">
+			<a href="#" class="dropbtn">Manage association</a>
+			<div class="activity-cards">
+				<a href="add_association.php" class="activity-card">Add association</a>
+				<a href="update_association.php" class="activity-card">Update association</a>
+				<a href="delete_association.php" class="activity-card">Delete association</a>
+			</div>
+		</div>
+		<div class="card dropdown" id="manage-student">
+			<a href="#" class="dropbtn">Manage staff</a>
+			<div class="manage-student-cards">
+				<a href="add_staff.php" class="student-card">Add staff</a>
+				<a href="update_staff.php" class="student-card">Update staff</a>
+				<a href="delete_staff.php" class="student-card">Delete staff</a>
+			</div>
+		</div>
+		<a href="view_attendance.php" class="card">View attendance</a>
+	</div>
+	<script>
+		var manageActivity = document.getElementById('manage-activity');
+		var manageStudent = document.getElementById('manage-student');
+		var activityCards = manageActivity.querySelector('.activity-cards');
+		var studentCards = manageStudent.querySelector('.manage-student-cards');
+
+		manageActivity.addEventListener('click', function() {
+			activityCards.classList.toggle('show');
+			studentCards.classList.remove('show');
+			manageActivity.classList.toggle('active');
+		});
+
+		manageStudent.addEventListener('click', function() {
+			studentCards.classList.toggle('show');
+			activityCards.classList.remove('show');
+			manageActivity.classList.remove('active');
+		});
+	</script>
+	 <button class="home-button"  onclick="goToOtherPage()">
+
+		<img src="image/image53.jpg" alt="HOME">
+		HOME
+		</button>
+		<script>
+			function goToOtherPage(){
+				window.location.href="home.html";
+			}
+			</script>
+</body>
+</html>

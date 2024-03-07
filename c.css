@@ -1,0 +1,87 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* add the CSS code block here */
+  h1 {
+    font-family: "Arial Black", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: blue;
+    -webkit-text-stroke: 2px black;
+     text-transform: 2px black;
+
+ }
+
+  #login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .show-login 
+  #login-form {
+    opacity: 0;
+    transform: translate(-0%, -0%) scale(1);
+  }
+
+
+  body {
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+}
