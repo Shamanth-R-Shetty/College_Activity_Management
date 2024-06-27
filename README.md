@@ -15,8 +15,8 @@ View activity details such as time, date, and venue.
 Access their attendance records.
 
 #Running the project
-1.Start the MySql database using XAMPP control panel.
-2.Initially run the LocalHost on the browser as http://localhost/myphp/home.htmnl.
-3.After entering the home page of the web application the user gets options as login & about.
-4.After selecting login option, the user can login through his user name and password.
-5.Based on the user username and password the user will nevigated to Admin dashboard, Staff dashboard or Student dashboard where they can perform the availed operations.
+1.Start the MySql database using XAMPP control panel.  
+2.Initially run the LocalHost on the browser as http://localhost/myphp/home.htmnl.  
+3.After entering the home page of the web application the user gets options as login & about.  
+4.After selecting login option, the user can login through his user name and password.  
+5.Based on the user username and password the user will nevigated to Admin dashboard, Staff dashboard or Student dashboard where they can perform the availed operations.  
