@@ -14,7 +14,7 @@ Record student attendance
 View activity details such as time, date, and venue.
 Access their attendance records.
 
-#Running the project
+# Running the project
 1.Start the MySql database using XAMPP control panel.  
 2.Initially run the LocalHost on the browser as http://localhost/myphp/home.htmnl.  
 3.After entering the home page of the web application the user gets options as login & about.  
